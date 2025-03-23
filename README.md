@@ -7,6 +7,9 @@ a UNIX socket under `/var/spool`. It also counts events by parsing Postfix's
 log entries, using regular expression matching. The log entries are retrieved from
 the systemd journal, the Docker logs, or from a log file.
 
+This is the fork of the original [Prometheus Postfix exporter](https://github.com/kumina/postfix_exporter)
+by Kumina which is not maintained anymore.
+
 ## Options
 
 These options can be used when starting the `postfix_exporter`
