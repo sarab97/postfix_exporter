@@ -1,4 +1,4 @@
-// +build !nodocker
+//go:build !nodocker
 
 package main
 

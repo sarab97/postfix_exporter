@@ -1,4 +1,4 @@
-// +build !nosystemd,linux
+//go:build !nosystemd && linux
 
 package main
 
