@@ -5,7 +5,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/alecthomas/kingpin"
+	"github.com/alecthomas/kingpin/v2"
 	"github.com/nxadm/tail"
 )
 

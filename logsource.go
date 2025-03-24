@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/alecthomas/kingpin"
+	"github.com/alecthomas/kingpin/v2"
 )
 
 // A LogSourceFactory provides a repository of log sources that can be

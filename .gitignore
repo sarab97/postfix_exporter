@@ -2,6 +2,10 @@
 *~
 .idea/
 
+# Mac OS X trash
+.DS_Store
+._*
+
 # Test binary, build with `go test -c`
 *.test
 

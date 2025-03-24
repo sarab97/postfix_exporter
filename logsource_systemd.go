@@ -9,7 +9,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/alecthomas/kingpin"
+	"github.com/alecthomas/kingpin/v2"
 	"github.com/coreos/go-systemd/v22/sdjournal"
 )
 

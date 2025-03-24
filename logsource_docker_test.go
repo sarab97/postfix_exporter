@@ -5,11 +5,10 @@ package main
 import (
 	"context"
 	"io"
-	"io/ioutil"
 	"strings"
 	"testing"
 
-	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/api/types/container"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -46,7 +45,7 @@ func TestDockerLogSource_Read(t *testing.T) {
 	ctx := context.Background()
 
 	c := &fakeDockerClient{
-		logsReader: ioutil.NopCloser(strings.NewReader("Feb 13 23:31:30 ahost anid[123]: aline\n")),
+		logsReader: io.NopCloser(strings.NewReader("Feb 13 23:31:30 ahost anid[123]: aline\n")),
 	}
 	src, err := NewDockerLogSource(ctx, c, "acontainer")
 	if err != nil {
@@ -68,7 +67,7 @@ type fakeDockerClient struct {
 	closeCalls         int
 }
 
-func (c *fakeDockerClient) ContainerLogs(ctx context.Context, containerID string, opts types.ContainerLogsOptions) (io.ReadCloser, error) {
+func (c *fakeDockerClient) ContainerLogs(ctx context.Context, containerID string, opts container.LogsOptions) (io.ReadCloser, error) {
 	c.containerLogsCalls = append(c.containerLogsCalls, containerID)
 	return c.logsReader, nil
 }
