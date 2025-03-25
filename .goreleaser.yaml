@@ -1,0 +1,26 @@
+version: 2
+project_name: postfix_exporter
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: default
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -tags=nosystemd,nodocker
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
