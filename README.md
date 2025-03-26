@@ -1,5 +1,10 @@
 # Prometheus Postfix exporter
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/sarab97/postfix_exporter.svg)](https://pkg.go.dev/github.com/sarab97/postfix_exporter)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sarab97/postfix_exporter)](https://goreportcard.com/report/github.com/sarab97/postfix_exporter)
+[![GitHub release](https://img.shields.io/github/release/sarab97/postfix_exporter.svg?sort=semver&maxAge=60)](https://github.com/sarab97/postfix_exporter/releases)
+![Go version](https://img.shields.io/github/go-mod/go-version/sarab97/postfix_exporter)
+
 Prometheus metrics exporter for [the Postfix mail server](http://www.postfix.org/).
 This exporter provides histogram metrics for the size and age of messages stored in
 the mail queue. It extracts these metrics from Postfix by connecting to

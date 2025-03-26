@@ -6,7 +6,6 @@ require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
 	github.com/coreos/go-systemd/v22 v22.5.0
 	github.com/docker/docker v28.0.2+incompatible
-	github.com/kumina/postfix_exporter v0.0.0-20221013165341-a6f58e9b2b2b
 	github.com/nxadm/tail v1.4.11
 	github.com/prometheus/client_golang v1.21.1
 	github.com/prometheus/client_model v0.6.1
