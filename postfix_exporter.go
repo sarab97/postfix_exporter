@@ -495,8 +495,8 @@ func NewPostfixExporter(showqPath string, logSrc LogSource, logUnsupportedLines 
 			[]string{"relay", "stage"}),
 		qmgrInsertsNrcpt: prometheus.NewHistogram(prometheus.HistogramOpts{
 			Namespace: "postfix",
-			Name:      "qmgr_messages_inserted_receipients",
-			Help:      "Number of receipients per message inserted into the mail queues.",
+			Name:      "qmgr_messages_inserted_recipients",
+			Help:      "Number of recipients per message inserted into the mail queues.",
 			Buckets:   []float64{1, 2, 4, 8, 16, 32, 64, 128},
 		}),
 		qmgrInsertsSize: prometheus.NewHistogram(prometheus.HistogramOpts{
