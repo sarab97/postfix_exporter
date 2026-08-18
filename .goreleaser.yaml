@@ -8,9 +8,9 @@ before:
 builds:
   - id: default
     env:
-      - CGO_ENABLED=0
+      - CGO_ENABLED=1
     flags:
-      - -tags=nosystemd,nodocker
+      - -tags=static_all
     goos:
       - linux
     goarch:
